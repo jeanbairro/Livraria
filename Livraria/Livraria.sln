@@ -13,9 +13,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{E21A3D85-2D2E-4773-8088-8C590B5C95AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livraria.Domain", "4 - Domain\Livraria.Domain\Livraria.Domain.csproj", "{B7B298BB-C35B-4CC1-A3DF-E6B75BB88434}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livraria.Domain.Test", "4 - Domain\Livraria.Domain.Test\Livraria.Domain.Test.csproj", "{3CB761A2-1E9A-450C-8336-60F48DF84C82}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7B298BB-C35B-4CC1-A3DF-E6B75BB88434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B298BB-C35B-4CC1-A3DF-E6B75BB88434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B298BB-C35B-4CC1-A3DF-E6B75BB88434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7B298BB-C35B-4CC1-A3DF-E6B75BB88434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB761A2-1E9A-450C-8336-60F48DF84C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB761A2-1E9A-450C-8336-60F48DF84C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB761A2-1E9A-450C-8336-60F48DF84C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB761A2-1E9A-450C-8336-60F48DF84C82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7B298BB-C35B-4CC1-A3DF-E6B75BB88434} = {DF51292B-368B-46CD-B606-EDDECAF42A49}
+		{3CB761A2-1E9A-450C-8336-60F48DF84C82} = {DF51292B-368B-46CD-B606-EDDECAF42A49}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A167D04-5537-4290-9592-25773C525519}
