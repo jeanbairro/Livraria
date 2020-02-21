@@ -24,6 +24,6 @@ namespace Livraria.Database.Contexts
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-                    => optionsBuilder.UseNpgsql("Host=localhost;Database=livraria;Username=postgres;Password=bapecajecarlos");
+            => optionsBuilder.UseNpgsql("Host=localhost;Database=livraria;Username=postgres;Password=bapecajecarlos");
     }
 }
