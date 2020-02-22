@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\5 - Infra\5.2 - Database\ClassLibrary1\Livraria.Database.csproj" />
+    <ProjectReference Include="..\..\5 - Infra\5.2 - Database\Livraria.Database\Livraria.Database.csproj" />
   </ItemGroup>
 
 </Project>
