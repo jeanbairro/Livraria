@@ -1,18 +1,22 @@
 ﻿using Livraria.Domain.Livros;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Livraria.Database.Contexts
 {
     public class LivrariaContext : DbContext, ILivrariaContext
     {
-        public LivrariaContext(DbContextOptions options)
+        private readonly IConfiguration _configuration;
+
+        public LivrariaContext(IConfiguration configuration, DbContextOptions options)
            : base(options)
         {
+            _configuration = configuration;
         }
 
         public DbSet<Livro> Livros { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseNpgsql("Host=localhost;Database=livraria;Username=postgres;Password=senha");
+            => optionsBuilder.UseNpgsql(_configuration.GetConnectionString(GetType().Name));
     }
 }
