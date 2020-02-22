@@ -18,5 +18,11 @@ namespace Livraria.Database.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder.UseNpgsql(_configuration.GetConnectionString(GetType().Name));
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(LivrariaContext).Assembly);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
