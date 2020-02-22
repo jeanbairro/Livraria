@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - CrossCutting", "5.1 -
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - Database", "5.2 - Database", "{24DC4E3A-C7DF-403F-8A7D-3187A6D78431}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livraria.Database", "5 - Infra\5.2 - Database\ClassLibrary1\Livraria.Database.csproj", "{D79FBE11-3732-4513-9816-7B852F2630A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livraria.Database", "5 - Infra\5.2 - Database\Livraria.Database\Livraria.Database.csproj", "{D79FBE11-3732-4513-9816-7B852F2630A8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livraria.Api", "1 - Application\Livraria.Api\Livraria.Api.csproj", "{12B858F1-9A2E-459C-BCBB-6EAE90950C84}"
 EndProject
