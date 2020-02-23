@@ -2,6 +2,7 @@
 using Livraria.Dtos.Livros;
 using Livraria.Services.Livros;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Livraria.Api.Controllers.Livros
@@ -17,15 +18,15 @@ namespace Livraria.Api.Controllers.Livros
         }
 
         [HttpPost]
-        public async Task<ActionResult> AddAsync(LivroFormDto dto)
-            => TratarRetorno(await _livroServices.AddAsync(dto));
+        public async Task<ActionResult> AddAsync(LivroFormDto dto, CancellationToken cancellationToken)
+            => TratarRetorno(await _livroServices.AddAsync(dto, cancellationToken));
 
         [HttpGet]
-        public async Task<ActionResult> GetAllAsync()
-            => Ok(await _livroServices.GetAllAsync());
+        public async Task<ActionResult> GetAllAsync(CancellationToken cancellationToken)
+            => Ok(await _livroServices.GetAllAsync(cancellationToken));
 
         [HttpPut]
-        public async Task<ActionResult> UpdateAsync(LivroFormDto dto)
-            => TratarRetorno(await _livroServices.UpdateAsync(dto));
+        public async Task<ActionResult> UpdateAsync(LivroFormDto dto, CancellationToken cancellationToken)
+            => TratarRetorno(await _livroServices.UpdateAsync(dto, cancellationToken));
     }
 }
