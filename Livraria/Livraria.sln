@@ -27,6 +27,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livraria.Api", "1 - Applica
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livraria.Repository", "3 - Repositories\Livraria.Repository\Livraria.Repository.csproj", "{A7046BDE-E358-48F8-AD72-6417BFB9D3FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livraria.Services", "2 - Services\Livraria.Services\Livraria.Services.csproj", "{9ACCBA95-9EF8-4AC1-8706-115CC61F714F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livraria.Dtos", "5 - Infra\5.1 - CrossCutting\Livraria.Dtos\Livraria.Dtos.csproj", "{4A254611-0071-4B24-912E-B3CB01A409C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +57,14 @@ Global
 		{A7046BDE-E358-48F8-AD72-6417BFB9D3FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7046BDE-E358-48F8-AD72-6417BFB9D3FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7046BDE-E358-48F8-AD72-6417BFB9D3FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ACCBA95-9EF8-4AC1-8706-115CC61F714F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ACCBA95-9EF8-4AC1-8706-115CC61F714F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ACCBA95-9EF8-4AC1-8706-115CC61F714F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ACCBA95-9EF8-4AC1-8706-115CC61F714F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A254611-0071-4B24-912E-B3CB01A409C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A254611-0071-4B24-912E-B3CB01A409C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A254611-0071-4B24-912E-B3CB01A409C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A254611-0071-4B24-912E-B3CB01A409C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +77,8 @@ Global
 		{D79FBE11-3732-4513-9816-7B852F2630A8} = {24DC4E3A-C7DF-403F-8A7D-3187A6D78431}
 		{12B858F1-9A2E-459C-BCBB-6EAE90950C84} = {C7EB48C3-DD4D-4CEA-B782-A780D5E438C3}
 		{A7046BDE-E358-48F8-AD72-6417BFB9D3FA} = {663F3976-1F29-46FE-AC50-9ADD719AAC07}
+		{9ACCBA95-9EF8-4AC1-8706-115CC61F714F} = {DD9DF173-F12C-4D31-9E3B-4CEEC2FBF812}
+		{4A254611-0071-4B24-912E-B3CB01A409C8} = {11E0388D-F152-4773-8111-D24D632BDAD6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A167D04-5537-4290-9592-25773C525519}

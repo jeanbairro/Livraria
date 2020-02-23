@@ -17,7 +17,7 @@ namespace Livraria.Repository.Livros
             _livrariaContext = livrariaContext;
         }
 
-        public async Task AddAsync(Livro livro, CancellationToken cancellationToken)
+        public async Task AddAsync(Livro livro, CancellationToken cancellationToken = default)
         {
             if (!livro.IsValid()) return;
 
@@ -25,14 +25,18 @@ namespace Livraria.Repository.Livros
             await _livrariaContext.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task<ICollection<Livro>> GetAsync(CancellationToken cancellationToken)
+        public async Task<ICollection<Livro>> GetAllAsync(CancellationToken cancellationToken = default)
             => await _livrariaContext.Livros.OrderBy(x => x.Titulo).ToListAsync(cancellationToken);
 
-        public async Task UpdateAsync(Livro livro, CancellationToken cancellationToken)
+        public async Task<Livro> GetByIdAsync(long id, CancellationToken cancellationToken = default)
+            => await _livrariaContext.Livros.FirstOrDefaultAsync(x => x.Id == id);
+
+        public async Task UpdateAsync(Livro livro, CancellationToken cancellationToken = default)
         {
+            if (!livro.IsValid()) return;
+
             var entry = _livrariaContext.Livros.Attach(livro);
             entry.State = EntityState.Modified;
-
             await _livrariaContext.SaveChangesAsync(cancellationToken);
         }
     }
