@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\3 - Repositories\Livraria.Repository\Livraria.Repository.csproj" />
+    <ProjectReference Include="..\..\5 - Infra\5.1 - CrossCutting\Livraria.Dtos\Livraria.Dtos.csproj" />
+  </ItemGroup>
+
+</Project>
