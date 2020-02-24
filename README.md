@@ -2,13 +2,13 @@
 Uma aplicação para gerenciar os livros da biblioteca municipal.
 
 ## Rotas
-GET: api/livros (Lista de livros)
+**GET**: _api/livros_ (Lista de livros)
 
-POST: api/livros (Cadastro de livros)
+**POST**: _api/livros_ (Cadastro de livros)
 
-PUT: api/livros (Edição de livros)
+**PUT**: _api/livros_ (Edição de livros)
 
-DELETE: api/livros/{livroId} (Remoção de livros)
+**DELETE**: _api/livros/{livroId}_ (Remoção de livros)
 
 ### Exemplo de body do POST
 ```javascript
