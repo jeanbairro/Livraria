@@ -3,11 +3,14 @@ Uma aplicação para gerenciar os livros da biblioteca municipal.
 
 ## Rotas
 GET: api/livros (Lista de livros)
+
 POST: api/livros (Cadastro de livros)
+
 PUT: api/livros (Edição de livros)
+
 DELETE: api/livros/{livroId} (Remoção de livros)
 
-###Exemplo de body do POST
+### Exemplo de body do POST
 ```javascript
 {
 	"Autor": "William",
@@ -16,7 +19,7 @@ DELETE: api/livros/{livroId} (Remoção de livros)
 }
 ```
 
-###Exemplo de body do PUT
+### Exemplo de body do PUT
 ```javascript
 {
 	"Autor": "William Scott",
