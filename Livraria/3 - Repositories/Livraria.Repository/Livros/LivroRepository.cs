@@ -25,6 +25,12 @@ namespace Livraria.Repository.Livros
             await _livrariaContext.SaveChangesAsync(cancellationToken);
         }
 
+        public async Task<bool> DeleteAsync(Livro livro, CancellationToken cancellationToken = default)
+        {
+            _livrariaContext.Livros.Remove(livro);
+            return (await _livrariaContext.SaveChangesAsync(cancellationToken) > 0);
+        }
+
         public async Task<ICollection<Livro>> GetAllAsync(CancellationToken cancellationToken = default)
             => await _livrariaContext.Livros.OrderBy(x => x.Titulo).ToListAsync(cancellationToken);
 

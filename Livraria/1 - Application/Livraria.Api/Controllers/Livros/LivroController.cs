@@ -21,6 +21,10 @@ namespace Livraria.Api.Controllers.Livros
         public async Task<ActionResult> AddAsync(LivroFormDto dto, CancellationToken cancellationToken)
             => TratarRetorno(await _livroServices.AddAsync(dto, cancellationToken));
 
+        [HttpDelete("{livroId}")]
+        public async Task<ActionResult> DeleteAsync(long livroId, CancellationToken cancellationToken)
+            => TratarRetorno(await _livroServices.DeleteAsync(livroId, cancellationToken));
+
         [HttpGet]
         public async Task<ActionResult> GetAllAsync(CancellationToken cancellationToken)
             => Ok(await _livroServices.GetAllAsync(cancellationToken));

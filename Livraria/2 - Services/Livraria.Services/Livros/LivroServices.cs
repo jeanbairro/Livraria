@@ -35,6 +35,16 @@ namespace Livraria.Services.Livros
             return livroDto;
         }
 
+        public async Task<bool> DeleteAsync(long livroId, CancellationToken cancellationToken = default)
+        {
+            if (livroId <= 0) return false;
+
+            var livro = await _livroRepository.GetByIdAsync(livroId, cancellationToken);
+            if (livro is null) return false;
+
+            return await _livroRepository.DeleteAsync(livro, cancellationToken);
+        }
+
         public async Task<ICollection<LivroDto>> GetAllAsync(CancellationToken cancellationToken = default)
         {
             var livros = await _livroRepository.GetAllAsync(cancellationToken);

@@ -10,5 +10,10 @@ namespace Livraria.Api.Controllers.Base
             => resultDto?.IsValid() ?? false
                 ? (ActionResult)Ok(resultDto)
                 : BadRequest(resultDto);
+
+        protected ActionResult TratarRetorno(bool sucesso)
+            => sucesso
+                ? (ActionResult)Ok()
+                : BadRequest();
     }
 }

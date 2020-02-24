@@ -76,6 +76,43 @@ namespace Livraria.Services.Test.Livros
             Assert.Empty(retorno.Errors);
         }
 
+        [Fact(DisplayName = "Remove um livro com erro")]
+        public async Task RemoverUmLivroComErro()
+        {
+            var livroServices = Fixture.GetLivroServices();
+            var livro = Fixture.GetLivroById();
+            var livroId = 0;
+            Fixture.LivroRepositoryMock.Setup(c =>
+                c.GetByIdAsync(LivroServicesTestsFixture.LivroExistenteId, default))
+                .Returns(Task.FromResult(livro));
+
+            var retorno = await livroServices.DeleteAsync(livroId);
+
+            Fixture.LivroRepositoryMock.Verify(x => x.GetByIdAsync(livroId, default), Times.Never);
+            Fixture.LivroRepositoryMock.Verify(x => x.DeleteAsync(livro, default), Times.Never);
+
+            Assert.False(retorno);
+        }
+
+        [Fact(DisplayName = "Remove um livro com sucesso")]
+        public async Task RemoverUmLivroComSucesso()
+        {
+            var livroServices = Fixture.GetLivroServices();
+            var livro = Fixture.GetLivroById();
+            var livroId = LivroServicesTestsFixture.LivroExistenteId;
+            Fixture.LivroRepositoryMock.Setup(c =>
+                c.GetByIdAsync(LivroServicesTestsFixture.LivroExistenteId, default))
+                .Returns(Task.FromResult(livro));
+            Fixture.LivroRepositoryMock.Setup(c => c.DeleteAsync(livro, default)).Returns(Task.FromResult(true));
+
+            var retorno = await livroServices.DeleteAsync(livroId);
+
+            Fixture.LivroRepositoryMock.Verify(x => x.GetByIdAsync(livroId, default), Times.Once);
+            Fixture.LivroRepositoryMock.Verify(x => x.DeleteAsync(livro, default), Times.Once);
+
+            Assert.True(retorno);
+        }
+
         [Fact(DisplayName = "Retorna todos os livros")]
         public async Task RetornarTodosOsLivros()
         {
