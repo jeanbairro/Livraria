@@ -49,6 +49,12 @@ namespace Livraria.Services.Livros
         public async Task<LivroFormDto> UpdateAsync(LivroFormDto livroDto, CancellationToken cancellationToken = default)
         {
             var livro = await _livroRepository.GetByIdAsync(livroDto.Id);
+            if (livro is null)
+            {
+                livroDto.AddError("Você precisa informar um livro.");
+                return livroDto;
+            }
+
             livro.SetAutor(livroDto.Autor);
             livro.SetEditora(livroDto.Editora);
             livro.SetTitulo(livroDto.Titulo);
