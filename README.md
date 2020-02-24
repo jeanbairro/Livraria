@@ -1,6 +1,9 @@
 # Livraria
 Uma aplicação para gerenciar os livros da biblioteca municipal.
 
+## Dependências
+_PostgreSQL_ [(download)](https://www.postgresql.org/download/)
+
 ## Rotas
 **GET**: _api/livros_ (Lista de livros)
 
