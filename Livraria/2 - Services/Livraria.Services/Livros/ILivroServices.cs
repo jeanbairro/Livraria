@@ -9,6 +9,8 @@ namespace Livraria.Services.Livros
     {
         Task<LivroFormDto> AddAsync(LivroFormDto livroDto, CancellationToken cancellationToken = default);
 
+        Task<bool> DeleteAsync(long livroId, CancellationToken cancellationToken = default);
+
         Task<ICollection<LivroDto>> GetAllAsync(CancellationToken cancellationToken = default);
 
         Task<LivroFormDto> UpdateAsync(LivroFormDto livroDto, CancellationToken cancellationToken = default);
